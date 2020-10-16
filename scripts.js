@@ -2,13 +2,17 @@ $(document).ready(function() {
     $.ajax({
         url: 'https://smileschool-api.hbtn.info/quotes',
         type: 'GET',
+        beforeSend: function() {
+            $("#MyLoader").show();
+        },
         success: function(request) {
+            $("#MyLoader").hide();
             for (let i = 0; i < request.length; i++) {
                 let $html = $(`
                 <div class="carousel-item carousel-item-content ${i === 0 ? 'active' : ''}">
                     <div class="row">
                         <div class="col-sm-3 text-center">
-                            <img class="rounded-circle" src=${request[i].pic_url} class="d-block w-100" alt="random person image">
+                            <img class="rounded-circle" src=${request[i].pic_url} class="d-block w-100" alt="random alt image">
                         </div>
                         <div class="col-sm-8 ml-3 d-flex flex-column">
                             <div>&lt;&lt; ${request[i].text} &gt;&gt;</div>
@@ -17,7 +21,8 @@ $(document).ready(function() {
                         </div>
                     </div>
                 </div>`);
+                $("#quotesCarouselInsider").append($html);
             }
-        }
+        },
     })
-})
+});
