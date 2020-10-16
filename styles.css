@@ -9,7 +9,7 @@
     font-style: normal;
     font-display: block;
   }
-  
+
   [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'holberton_school-icon' !important;
@@ -18,12 +18,12 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   .holberton_school-icon-arrow_1:before {
     content: "\e900";
   }
@@ -87,7 +87,7 @@
   .holberton_school-icon-star:before {
     content: "\e914";
   }
-  
+
 :root {
     --max-width: 1150px;
     --purple-color: #C271FF;
@@ -272,7 +272,7 @@ main.courses-main .hero-section {
 
 .quotes-section img {
     width: 125px;
-    height: 125px;   
+    height: 125px;
 }
 
 .carousel-item-content {
